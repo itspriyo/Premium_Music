@@ -10,11 +10,11 @@ from config import Config
 REPLY_MESSAGE=Config.REPLY_MESSAGE
 buttons = [
         [
-        InlineKeyboardButton("Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url='https://github.com/PriyoKhan777/Premium_Music'),
+        InlineKeyboardButton("Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url='https://github.com/itspriyo/Premium_Music'),
     ],
     [
         InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url='https://t.me/premiumappsaccountfree'),
-        InlineKeyboardButton('Aᴅᴅᴀ Gʀᴏᴜᴘ', url='https://t.me/unknownfriends1'),
+        InlineKeyboardButton('Aᴅᴅᴀ Gʀᴏᴜᴘ', url='https://t.me/joinchat/v5mRLN2TTohlNzFl'),
     ],
     [
         InlineKeyboardButton('Hᴏᴡ Tᴏ Usᴇ', callback_data='help'),
@@ -24,11 +24,11 @@ buttons = [
 @Client.on_inline_query()
 async def search(client, query):
     answers = []
-    if query.query == "ORU_MANDAN_PM_VANNU":
+    if query.query == "ITS_ME_PRIYO":
         answers.append(
             InlineQueryResultArticle(
                 title="Deploy",
-                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>You can't use this bot in your group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/PriyoKhan777/Premium_Music) below.</b>", disable_web_page_preview=True),
+                input_message_content=InputTextMessageContent(f"{REPLY_MESSAGE}\n\n<b>You can't use this bot in your group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/itspriyo/Premium_Music) below.</b>", disable_web_page_preview=True),
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )
