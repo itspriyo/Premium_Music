@@ -150,11 +150,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton("Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url='https://github.com/PriyoKhan777/Premium_Music'),
+                InlineKeyboardButton("Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url='https://github.com/itspriyo/Premium_Music'),
             ],
             [
                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url='https://t.me/premiumappsaccountfree'),
-               InlineKeyboardButton('Aᴅᴅᴀ Gʀᴏᴜᴘ', url='https://t.me/unknownfriends1'),
+               InlineKeyboardButton('Aᴅᴅᴀ Gʀᴏᴜᴘ', url='https://t.me/joinchat/v5mRLN2TTohlNzFl'),
             ],
             [
                InlineKeyboardButton('', url='https://github.com/itspriyo'),
