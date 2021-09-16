@@ -163,11 +163,11 @@ async def yplay(_, message: Message):
 
     if type=="youtube" or type=="query":
         if type=="youtube":
-            msg = await message.reply_text("⚡️ **Fetching Song From YouTube...**")
+            msg = await message.reply_text("🥰 **Aʏᴏ Jᴀᴀɴᴜ, I'ᴍ Sᴇᴀʀᴄʜɪɴɢ Yᴏᴜʀ Sᴏɴɢ...**")
             url=yturl
         elif type=="query":
             try:
-                msg = await message.reply_text("⚡️ **Fetching Song From YouTube...**")
+                msg = await message.reply_text("🥰 **Aʏᴏ Jᴀᴀɴᴜ, I'ᴍ Sᴇᴀʀᴄʜɪɴɢ Yᴏᴜʀ Sᴏɴɢ...**")
                 ytquery=ysearch
                 results = YoutubeSearch(ytquery, max_results=1).to_dict()
                 url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -1126,7 +1126,7 @@ async def export_play_list(client, message: Message):
     file=f"{message.chat.id}_{message.message_id}.json"
     with open(file, 'w+') as outfile:
         json.dump(playlist, outfile, indent=4)
-    await client.send_document(chat_id=message.chat.id, document=file, file_name="PlayList.json", caption=f"Playlist\n\nNumber Of Songs: <code>{len(playlist)}</code>\n\nJoin [tgbotsproject](https://t.me/tgbotsproject)")
+    await client.send_document(chat_id=message.chat.id, document=file, file_name="PlayList.json", caption=f"Playlist\n\nNumber Of Songs: <code>{len(playlist)}</code>\n\nJoɴ [Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ](https://t.me/premiumappsaccountfree)")
     await mp.delete(message)
     try:
         os.remove(file)
@@ -1255,7 +1255,7 @@ async def upload(client, message):
             title=playlist[0][1],
             duration=int(float(dur)),
             performer="MusicPlayer",
-            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [VCMusicPlayer](https://github.com/LushaiMusic/VCMusicPlayer)</b>"
+            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [Premium Music](https://github.com/itspriyo/VCMusicPlayer)</b>"
             )
         await m.delete()
     else:
@@ -1302,7 +1302,7 @@ async def not_chat(_, m: Message):
     buttons = [
         [
             InlineKeyboardButton('Cʜᴀɴɴᴇʟ'	, url='https://t.me/premium_bd'),
-            InlineKeyboardButton('Aᴅᴅᴀ Gʀᴏᴜᴘ', url='https://t.me/unknownfriends1'),
+            InlineKeyboardButton('Aᴅᴅᴀ Gʀᴏᴜᴘ', url='https://t.me/joinchat/v5mRLN2TTohlNzFl'),
         ],
         [
             InlineKeyboardButton('Hᴏᴡ Tᴏ Usᴇ', callback_data='help'),       
@@ -1312,5 +1312,5 @@ async def not_chat(_, m: Message):
             InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url='https://t.me/premiumappsaccountfree')
         ]
         ]
-    k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [Soure Code 👈](https://github.com/PriyoKhan777/Premium_Music) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
+    k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [Soure Code 👈](https://github.com/itspriyo/Premium_Music) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
     await mp.delete(m)
